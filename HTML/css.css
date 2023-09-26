@@ -1,11 +1,55 @@
-h2{
-    color: aliceblue;
-    /* height: 100px; */
-    /* height: auto; */
-    background-color: blue;
-    
+body {
+  background-color: cadetblue;
+  padding: 100px 400px;
 }
 
-#satu{
-    background-color: brown ;
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+  border: 1px solid;
+}
+
+.col {
+  flex: 1;
+  padding: 15px;
+  margin: 15px;
+  box-sizing: border-box;
+}
+
+.form-control input,
+select,
+option {
+  width: 190px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid;
+}
+
+.cursor,
+#daftar {
+  cursor: pointer;
+}
+
+#kanan {
+  background-color: blue !important;
+  padding-top: 120px;
+}
+
+img {
+  margin: 25px 30px;
+}
+
+.container {
+  padding: 20px;
+  background-color: wheat;
+}
+
+#daftar {
+  background-color: blue;
+  color: whitesmoke;
+  padding: 10px 25px;
+  border-radius: 15px;
+  border: none;
 }
