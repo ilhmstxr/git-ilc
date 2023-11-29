@@ -1,15 +1,10 @@
 body {
-  /* display: flex; */
-  width: 99vw;
   margin: 0;
 }
 
 header {
-  padding: 0;
-  margin: 0px;
   padding-top: 60px;
   padding-bottom: 30px;
-  display: fixed;
   background-color: #00c8ea;
   color: white;
   text-align: center;
@@ -30,10 +25,13 @@ nav {
 .register {
   margin: 10px;
   padding: 20px;
-  /* border: solid red; */
   box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.4);
   background-color: beige;
 }
+/* 
+@media only screen and (max-width: 768px) {
+  .profil,.kegiatan,.register,.image{}
+} */
 
 nav,
 a {
@@ -63,36 +61,50 @@ a:hover {
   flex-direction: row;
   margin: 30px 50px;
   padding: 10px;
-  /* background-color: violet; */
 }
 
 .row {
   display: flex;
-  justify-content: space-between;
+  margin: 20px;
 }
 
 .col-left {
-  /* flex: 1; */
-  width: 70%;
-  /* border: solid slateblue; */
+  flex: 75%;
+  text-align: center;
+  margin: 10px;
 }
 
 .col-right {
-  /* flex: 1; */
+  /* flex: 25%; */
+  /* max-width: 40%; */
+  padding-left: 0;
   text-align: center;
-  width: 30%;
-  /* border: solid blue; */
 }
 
-.col-right .col {
-  text-align: left;
+@media (max-width:1200px) {
+  .row {
+    flex-direction: column-reverse;
+    /* flex: none; */
+  }
+
+  .col-right {
+    /* flex: 100%; */
+    flex: none;
+    width: 100%;
+  }
+}
+
+.col-right ul {
+  padding-left: 0;
+}
+
+.col-right .col-right {
+  width: 100px;
 }
 
 .col-right li {
   list-style-type: none;
-  padding: 5px;
-  /* padding-right: 3px; */
-  margin-right: 20px;
+  padding: 5px 0px;
 }
 
 .col-right img {
@@ -100,7 +112,17 @@ a:hover {
   height: auto;
 }
 
+.row-right {
+  display: flex;
+}
+
+.col {
+  flex: 50%;
+}
+
 .logo {
+  border: solid 1px;
+  margin-top: 20px;
   box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -108,35 +130,15 @@ a:hover {
   display: flex;
 }
 
-.register .kanan {
-  /* flex: 1; */
-  /* border: solid red; */
-  width: 50%;
-}
-
-.register .kanan img{
-  width: 450px;
-  height: auto;
-}
-
-.register .kiri {
-  /* flex: 1; */
-  width: 50%;
-}
-
-.profil img,
-.kegiatan img {
-  width: 800px;
+.register .kanan img {
   height: auto;
 }
 
 .register label {
   margin-bottom: 0px;
-  /* padding: 0px; */
 }
 
 .register h4 {
-  /* border: solid black 1px; */
   margin: 0px;
 }
 
@@ -146,7 +148,6 @@ option {
   width: 100%;
   border: 10px;
   height: 25px;
-  /* border-radius: 5px; */
   border: 1px solid grey;
   border-radius: 4px;
   font-size: 16;
@@ -168,4 +169,19 @@ option {
   padding: 10px 25px;
   border-radius: 15px;
   border: none;
+}
+aside {
+  float: right;
+}
+
+@media screen and(max-width: 768px) {
+  aside {
+    float: none;
+    text-align: center;
+  }
+
+  nav ul {
+    text-align: center;
+    margin-top: 20px;
+  }
 }
